@@ -1,0 +1,4 @@
+terminal
+cd to this folder
+gnuplot <enter>
+plot "afile.txt" using 1:2

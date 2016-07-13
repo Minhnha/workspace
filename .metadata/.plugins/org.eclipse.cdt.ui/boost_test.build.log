@@ -1,0 +1,15 @@
+18:05:50 **** Incremental Build of configuration Debug for project boost_test ****
+make all 
+Building file: ../src/boost_test.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/boost_test.d" -MT"src/boost_test.d" -o "src/boost_test.o" "../src/boost_test.cpp"
+Finished building: ../src/boost_test.cpp
+ 
+Building target: boost_test
+Invoking: Cross G++ Linker
+g++ -L/home/minhnhapham/workspace/odeint-v2/include -o "boost_test"  ./src/boost_test.o   
+Finished building target: boost_test
+ 
+
+18:05:53 Build Finished (took 3s.172ms)
+

@@ -1,0 +1,15 @@
+17:36:00 **** Incremental Build of configuration Debug for project flexjoint ****
+make all 
+Building file: ../src/flexjoint.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/flexjoint.d" -MT"src/flexjoint.d" -o "src/flexjoint.o" "../src/flexjoint.cpp"
+Finished building: ../src/flexjoint.cpp
+ 
+Building target: flexjoint
+Invoking: Cross G++ Linker
+g++  -o "flexjoint"  ./src/flexjoint.o   
+Finished building target: flexjoint
+ 
+
+17:36:00 Build Finished (took 265ms)
+

@@ -1,0 +1,104 @@
+//============================================================================
+// Name        : flexjoint.cpp
+// Author      : Minh nha pham
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <fstream>
+#include <math.h>
+using namespace std;
+
+float h = 0.001;
+float I,mgl,k,N,J,B;
+float t[2001];
+float q1[2001], q2[2001], z1[2001],z2[2001];
+float k_1,k_2,k_3,k_4,l_1,l_2,l_3,l_4;
+
+float dq1dt(float z1)
+{
+float result;
+result = z1;
+return (result);
+}
+
+float dz1dt(float q1, float q2)
+{
+float result;
+result = -0.0513*k*(q1-0.0063*q2)-0.0513*mgl*sin(q1);
+return (result);
+}
+
+float dq2dt(float z2)
+{
+float result;
+result = z2;
+return (result);
+}
+
+float dz2dt(float q1, float q2, float z2)
+{
+float result;
+result = -3.125e3*B*z2+k*19.5313*(q1-0.0063*q2);
+return (result);
+}
+
+int main() {
+
+	I = 19.5;
+	J = 320e-6;
+	mgl = 213.6618;
+	k = 121e3;
+	B = 0.0011;
+	N = 160;
+
+	q1[1] = 0.1;
+
+
+	for (int i=1;i<2003;i++)
+	{
+	t[i]=(i-1)*h;
+//	x[i]=0;
+//	cout << t[i] << endl;
+	}
+
+
+
+	for (int i=1;i<2003;i++)
+		{
+	    k_1 = h*dq1dt(z1[i]);
+	/*    l_1 = h*dz1dt(y[i],z[i]);
+
+	    k_2 = h*dydt(z[i]+0.5*l_1);
+	    l_2 = h*dzdt(y[i]+0.5*k_1,z[i]+0.5*l_1);
+
+	    k_3 = h*dydt(z[i]+0.5*l_2);
+	    l_3 = h*dzdt(y[i]+0.5*k_2,z[i]+0.5*l_2);
+
+	    k_4 = h*dydt(z[i]+l_3);
+	    l_4 = h*dzdt(y[i]+k_3,z[i]+l_3);
+
+	    y[i+1] = y[i] + 0.16667*(k_1+2*k_2+2*k_3+k_4);
+	    z[i+1] = z[i] + 0.16667*(l_1+2*l_2+2*l_3+l_4);*/
+
+
+
+		}
+
+//	cout << sizeof(z)/sizeof(z[0]) << endl;
+
+
+	cout << "finish" << endl; // prints !!!Hello World!!!
+	return 0;
+}
+
+/*
+// save to file-------------------------------------------------------
+    ofstream outfile;
+    outfile.open("afile.txt", std::ios_base::app); // append to a file
+    outfile << t[i] << '\t'<< y[i] << '\t' << z[i] << endl;
+    outfile.close();
+//--------------------------------------------------------------------
+*/

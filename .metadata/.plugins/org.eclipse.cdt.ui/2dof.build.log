@@ -1,0 +1,1282 @@
+14:29:36 **** Incremental Build of configuration Debug for project 2dof ****
+make all 
+Building file: ../src/2dof.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/2dof.d" -MT"src/2dof.d" -o "src/2dof.o" "../src/2dof.cpp"
+In file included from /usr/include/boost/serialization/level.hpp:28:0,
+                 from /usr/include/boost/serialization/nvp.hpp:31,
+                 from /usr/include/boost/serialization/array.hpp:19,
+                 from /usr/include/boost/numeric/ublas/storage.hpp:21,
+                 from /usr/include/boost/numeric/ublas/vector.hpp:19,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/mpl/eval_if.hpp: In instantiation of ‘struct boost::mpl::eval_if_c<true, boost::range_const_iterator<double>, boost::range_mutable_iterator<const double> >’:
+/usr/include/boost/range/iterator.hpp:63:63:   required from ‘struct boost::range_iterator<const double>’
+/usr/include/boost/range/begin.hpp:112:61:   required by substitution of ‘template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&) [with T = double]’
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:45:   required from ‘static void boost::numeric::odeint::range_algebra::for_each3(S1&, S2&, S3&, Op) [with S1 = double; S2 = const double; S3 = const double; Op = boost::numeric::odeint::default_operations::rel_error<double>]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:80:9:   required from ‘boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::value_type boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::error(boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::algebra_type&, const State&, const Deriv&, Err&, Time) const [with State = double; Deriv = double; Err = double; Time = double; Value = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::value_type = double; boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::algebra_type = boost::numeric::odeint::range_algebra]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:710:110:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/mpl/eval_if.hpp:60:31: error: no type named ‘type’ in ‘boost::mpl::eval_if_c<true, boost::range_const_iterator<double>, boost::range_mutable_iterator<const double> >::f_ {aka struct boost::range_const_iterator<double>}’
+     typedef typename f_::type type;
+                               ^
+/usr/include/boost/mpl/eval_if.hpp: In instantiation of ‘struct boost::mpl::eval_if_c<false, boost::range_const_iterator<double>, boost::range_mutable_iterator<double> >’:
+/usr/include/boost/range/iterator.hpp:63:63:   required from ‘struct boost::range_iterator<double>’
+/usr/include/boost/range/begin.hpp:101:55:   required by substitution of ‘template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&) [with T = double]’
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:45:   required from ‘static void boost::numeric::odeint::range_algebra::for_each3(S1&, S2&, S3&, Op) [with S1 = double; S2 = const double; S3 = const double; Op = boost::numeric::odeint::default_operations::rel_error<double>]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:80:9:   required from ‘boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::value_type boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::error(boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::algebra_type&, const State&, const Deriv&, Err&, Time) const [with State = double; Deriv = double; Err = double; Time = double; Value = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::value_type = double; boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::algebra_type = boost::numeric::odeint::range_algebra]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:710:110:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/mpl/eval_if.hpp:60:31: error: no type named ‘type’ in ‘boost::mpl::eval_if_c<false, boost::range_const_iterator<double>, boost::range_mutable_iterator<double> >::f_ {aka struct boost::range_mutable_iterator<double>}’
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp: In instantiation of ‘static void boost::numeric::odeint::range_algebra::for_each3(S1&, S2&, S3&, Op) [with S1 = double; S2 = const double; S3 = const double; Op = boost::numeric::odeint::default_operations::rel_error<double>]’:
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:80:9:   required from ‘boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::value_type boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::error(boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::algebra_type&, const State&, const Deriv&, Err&, Time) const [with State = double; Deriv = double; Err = double; Time = double; Value = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::value_type = double; boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::algebra_type = boost::numeric::odeint::range_algebra]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:710:110:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:45: error: no matching function for call to ‘begin(double&)’
+         detail::for_each3( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , op );
+                                             ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:45: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   substitution of deduced template arguments resulted in errors seen above
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   substitution of deduced template arguments resulted in errors seen above
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:64: error: no matching function for call to ‘end(double&)’
+         detail::for_each3( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , op );
+                                                                ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:64: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:19:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/end.hpp:95:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::end(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type end( T& r )
+                                                       ^
+/usr/include/boost/range/end.hpp:95:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/end.hpp:106:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::end(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type end( const T& r )
+                                                             ^
+/usr/include/boost/range/end.hpp:106:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:85: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each3( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , op );
+                                                                                     ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:85: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:106: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each3( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , op );
+                                                                                                          ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:106: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp: In instantiation of ‘static Value boost::numeric::odeint::range_algebra::reduce(const S&, Red, Value) [with Value = double; S = double; Red = boost::numeric::odeint::default_operations::maximum<double>]’:
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:84:109:   required from ‘boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::value_type boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::error(boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::algebra_type&, const State&, const Deriv&, Err&, Time) const [with State = double; Deriv = double; Err = double; Time = double; Value = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::value_type = double; boost::numeric::odeint::default_error_checker<Value, Algebra, Operations>::algebra_type = boost::numeric::odeint::range_algebra]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:710:110:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:130:48: error: no matching function for call to ‘begin(const double&)’
+         return detail::reduce( boost::begin( s ) , boost::end( s ) , red , init );
+                                                ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:130:48: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:130:66: error: no matching function for call to ‘end(const double&)’
+         return detail::reduce( boost::begin( s ) , boost::end( s ) , red , init );
+                                                                  ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:130:66: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:19:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/end.hpp:95:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::end(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type end( T& r )
+                                                       ^
+/usr/include/boost/range/end.hpp:95:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/end.hpp:106:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::end(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type end( const T& r )
+                                                             ^
+/usr/include/boost/range/end.hpp:106:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp: In instantiation of ‘static void boost::numeric::odeint::range_algebra::for_each7(S1&, S2&, S3&, S4&, S5&, S6&, S7&, Op) [with S1 = double; S2 = double; S3 = double; S4 = double; S5 = double; S6 = double; S7 = double; Op = boost::numeric::odeint::default_operations::scale_sum6<double, double, double, double, double, double>]’:
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:183:13:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/base/explicit_error_stepper_fsal_base.hpp:253:9:   required from ‘void boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; Stepper = boost::numeric::odeint::runge_kutta_dopri5<double>; short unsigned int Order = 5u; short unsigned int StepperOrder = 5u; short unsigned int ErrorOrder = 4u; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:707:9:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:45: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                             ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:45: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:64: error: no matching function for call to ‘end(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:64: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:19:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/end.hpp:95:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::end(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type end( T& r )
+                                                       ^
+/usr/include/boost/range/end.hpp:95:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/end.hpp:106:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::end(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type end( const T& r )
+                                                             ^
+/usr/include/boost/range/end.hpp:106:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:85: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                     ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:85: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:106: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                          ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:106: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:127: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                               ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:127: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:148: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                                                    ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:148: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:169: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                                                                         ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:169: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:190: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                                                                                              ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:190: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp: In instantiation of ‘static void boost::numeric::odeint::range_algebra::for_each7(S1&, S2&, S3&, S4&, S5&, S6&, S7&, Op) [with S1 = double; S2 = const double; S3 = double; S4 = double; S5 = double; S6 = double; S7 = double; Op = boost::numeric::odeint::default_operations::scale_sum6<double, double, double, double, double, double>]’:
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:191:13:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/base/explicit_error_stepper_fsal_base.hpp:253:9:   required from ‘void boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; Stepper = boost::numeric::odeint::runge_kutta_dopri5<double>; short unsigned int Order = 5u; short unsigned int StepperOrder = 5u; short unsigned int ErrorOrder = 4u; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:707:9:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:45: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                             ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:45: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:64: error: no matching function for call to ‘end(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:64: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:19:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/end.hpp:95:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::end(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type end( T& r )
+                                                       ^
+/usr/include/boost/range/end.hpp:95:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/end.hpp:106:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::end(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type end( const T& r )
+                                                             ^
+/usr/include/boost/range/end.hpp:106:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:85: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                     ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:85: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:106: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                          ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:106: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:127: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                               ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:127: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:148: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                                                    ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:148: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:169: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                                                                         ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:169: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:190: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                                                                                              ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:190: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp: In instantiation of ‘static void boost::numeric::odeint::range_algebra::for_each3(S1&, S2&, S3&, Op) [with S1 = double; S2 = const double; S3 = const double; Op = boost::numeric::odeint::default_operations::scale_sum2<double, double>]’:
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:128:9:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:181:75:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/base/explicit_error_stepper_fsal_base.hpp:253:9:   required from ‘void boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; Stepper = boost::numeric::odeint::runge_kutta_dopri5<double>; short unsigned int Order = 5u; short unsigned int StepperOrder = 5u; short unsigned int ErrorOrder = 4u; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:707:9:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:45: error: no matching function for call to ‘begin(double&)’
+         detail::for_each3( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , op );
+                                             ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:45: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:64: error: no matching function for call to ‘end(double&)’
+         detail::for_each3( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , op );
+                                                                ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:64: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:19:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/end.hpp:95:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::end(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type end( T& r )
+                                                       ^
+/usr/include/boost/range/end.hpp:95:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/end.hpp:106:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::end(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type end( const T& r )
+                                                             ^
+/usr/include/boost/range/end.hpp:106:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:85: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each3( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , op );
+                                                                                     ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:85: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:106: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each3( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , op );
+                                                                                                          ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:52:106: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp: In instantiation of ‘static void boost::numeric::odeint::range_algebra::for_each4(S1&, S2&, S3&, S4&, Op) [with S1 = double; S2 = const double; S3 = const double; S4 = double; Op = boost::numeric::odeint::default_operations::scale_sum3<double, double, double>]’:
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:133:9:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:181:75:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/base/explicit_error_stepper_fsal_base.hpp:253:9:   required from ‘void boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; Stepper = boost::numeric::odeint::runge_kutta_dopri5<double>; short unsigned int Order = 5u; short unsigned int StepperOrder = 5u; short unsigned int ErrorOrder = 4u; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:707:9:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:45: error: no matching function for call to ‘begin(double&)’
+         detail::for_each4( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , op );
+                                             ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:45: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:64: error: no matching function for call to ‘end(double&)’
+         detail::for_each4( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , op );
+                                                                ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:64: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:19:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/end.hpp:95:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::end(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type end( T& r )
+                                                       ^
+/usr/include/boost/range/end.hpp:95:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/end.hpp:106:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::end(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type end( const T& r )
+                                                             ^
+/usr/include/boost/range/end.hpp:106:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:85: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each4( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , op );
+                                                                                     ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:85: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:106: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each4( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , op );
+                                                                                                          ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:106: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:127: error: no matching function for call to ‘begin(double&)’
+         detail::for_each4( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , op );
+                                                                                                                               ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:58:127: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp: In instantiation of ‘static void boost::numeric::odeint::range_algebra::for_each5(S1&, S2&, S3&, S4&, S5&, Op) [with S1 = double; S2 = const double; S3 = const double; S4 = double; S5 = double; Op = boost::numeric::odeint::default_operations::scale_sum4<double, double, double, double>]’:
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:138:9:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:181:75:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/base/explicit_error_stepper_fsal_base.hpp:253:9:   required from ‘void boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; Stepper = boost::numeric::odeint::runge_kutta_dopri5<double>; short unsigned int Order = 5u; short unsigned int StepperOrder = 5u; short unsigned int ErrorOrder = 4u; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:707:9:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:45: error: no matching function for call to ‘begin(double&)’
+         detail::for_each5( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , op );
+                                             ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:45: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:64: error: no matching function for call to ‘end(double&)’
+         detail::for_each5( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , op );
+                                                                ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:64: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:19:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/end.hpp:95:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::end(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type end( T& r )
+                                                       ^
+/usr/include/boost/range/end.hpp:95:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/end.hpp:106:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::end(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type end( const T& r )
+                                                             ^
+/usr/include/boost/range/end.hpp:106:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:85: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each5( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , op );
+                                                                                     ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:85: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:106: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each5( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , op );
+                                                                                                          ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:106: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:127: error: no matching function for call to ‘begin(double&)’
+         detail::for_each5( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , op );
+                                                                                                                               ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:127: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:148: error: no matching function for call to ‘begin(double&)’
+         detail::for_each5( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , op );
+                                                                                                                                                    ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:64:148: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp: In instantiation of ‘static void boost::numeric::odeint::range_algebra::for_each6(S1&, S2&, S3&, S4&, S5&, S6&, Op) [with S1 = double; S2 = const double; S3 = const double; S4 = double; S5 = double; S6 = double; Op = boost::numeric::odeint::default_operations::scale_sum5<double, double, double, double, double>]’:
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:142:9:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:181:75:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/base/explicit_error_stepper_fsal_base.hpp:253:9:   required from ‘void boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; Stepper = boost::numeric::odeint::runge_kutta_dopri5<double>; short unsigned int Order = 5u; short unsigned int StepperOrder = 5u; short unsigned int ErrorOrder = 4u; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:707:9:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:45: error: no matching function for call to ‘begin(double&)’
+         detail::for_each6( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , op );
+                                             ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:45: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:64: error: no matching function for call to ‘end(double&)’
+         detail::for_each6( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , op );
+                                                                ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:64: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:19:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/end.hpp:95:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::end(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type end( T& r )
+                                                       ^
+/usr/include/boost/range/end.hpp:95:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/end.hpp:106:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::end(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type end( const T& r )
+                                                             ^
+/usr/include/boost/range/end.hpp:106:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:85: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each6( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , op );
+                                                                                     ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:85: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:106: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each6( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , op );
+                                                                                                          ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:106: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:127: error: no matching function for call to ‘begin(double&)’
+         detail::for_each6( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , op );
+                                                                                                                               ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:127: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:148: error: no matching function for call to ‘begin(double&)’
+         detail::for_each6( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , op );
+                                                                                                                                                    ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:148: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:169: error: no matching function for call to ‘begin(double&)’
+         detail::for_each6( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , op );
+                                                                                                                                                                         ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:70:169: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp: In instantiation of ‘static void boost::numeric::odeint::range_algebra::for_each7(S1&, S2&, S3&, S4&, S5&, S6&, S7&, Op) [with S1 = double; S2 = const double; S3 = const double; S4 = double; S5 = double; S6 = double; S7 = double; Op = boost::numeric::odeint::default_operations::scale_sum6<double, double, double, double, double, double>]’:
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:146:9:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/runge_kutta_dopri5.hpp:181:75:   required from ‘void boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step_impl(System, const StateIn&, const DerivIn&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::runge_kutta_dopri5<State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/base/explicit_error_stepper_fsal_base.hpp:253:9:   required from ‘void boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::do_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, StateOut&, DerivOut&, boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type, Err&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; Err = double; Stepper = boost::numeric::odeint::runge_kutta_dopri5<double>; short unsigned int Order = 5u; short unsigned int StepperOrder = 5u; short unsigned int ErrorOrder = 4u; State = double; Value = double; Deriv = double; Time = double; Algebra = boost::numeric::odeint::range_algebra; Operations = boost::numeric::odeint::default_operations; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::explicit_error_stepper_fsal_base<Stepper, Order, StepperOrder, ErrorOrder, State, Value, Deriv, Time, Algebra, Operations, Resizer>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:707:9:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, const StateIn&, const DerivIn&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, StateOut&, DerivOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateIn = double; DerivIn = double; StateOut = double; DerivOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:660:104:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, DerivInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; DerivInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:853:59:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step_v1(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/stepper/controlled_runge_kutta.hpp:561:49:   required from ‘boost::numeric::odeint::controlled_step_result boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::try_step(System, StateInOut&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&, boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type&) [with System = void (*)(double, double&, double); StateInOut = double; ErrorStepper = boost::numeric::odeint::runge_kutta_dopri5<double>; ErrorChecker = boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>; Resizer = boost::numeric::odeint::initially_resizer; boost::numeric::odeint::controlled_runge_kutta<ErrorStepper, ErrorChecker, Resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>::time_type = double]’
+/usr/include/boost/numeric/odeint/integrate/detail/integrate_adaptive.hpp:98:17:   required from ‘size_t boost::numeric::odeint::detail::integrate_adaptive(Stepper, System, State&, Time&, Time, Time&, Observer, boost::numeric::odeint::controlled_stepper_tag) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+/usr/include/boost/numeric/odeint/integrate/integrate_adaptive.hpp:44:61:   required from ‘size_t boost::numeric::odeint::integrate_adaptive(Stepper, System, State&, Time, Time, Time, Observer) [with Stepper = boost::numeric::odeint::controlled_runge_kutta<boost::numeric::odeint::runge_kutta_dopri5<double>, boost::numeric::odeint::default_error_checker<double, boost::numeric::odeint::range_algebra, boost::numeric::odeint::default_operations>, boost::numeric::odeint::initially_resizer, boost::numeric::odeint::explicit_error_stepper_fsal_tag>; System = void (*)(double, double&, double); State = double; Time = double; Observer = void (*)(const double&, double); size_t = unsigned int]’
+../src/2dof.cpp:39:65:   required from here
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:45: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                             ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:45: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:64: error: no matching function for call to ‘end(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:64: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:19:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/end.hpp:95:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::end(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type end( T& r )
+                                                       ^
+/usr/include/boost/range/end.hpp:95:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/end.hpp:106:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::end(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type end( const T& r )
+                                                             ^
+/usr/include/boost/range/end.hpp:106:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:85: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                     ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:85: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:106: error: no matching function for call to ‘begin(const double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                          ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:106: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:127: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                               ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:127: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:148: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                                                    ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:148: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:169: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                                                                         ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:169: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+In file included from /usr/include/boost/numeric/odeint/stepper/euler.hpp:25:0,
+                 from /usr/include/boost/numeric/odeint.hpp:27,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:190: error: no matching function for call to ‘begin(double&)’
+         detail::for_each7( boost::begin( s1 ) , boost::end( s1 ) , boost::begin( s2 ) , boost::begin( s3 ) , boost::begin( s4 ) , boost::begin( s5 ) , boost::begin( s6 ) , boost::begin( s7 ) , op );
+                                                                                                                                                                                              ^
+/usr/include/boost/numeric/odeint/algebra/range_algebra.hpp:76:190: note: candidates are:
+In file included from /usr/include/boost/range/functions.hpp:18:0,
+                 from /usr/include/boost/range.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/resize.hpp:22,
+                 from /usr/include/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /usr/include/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /usr/include/boost/numeric/odeint.hpp:25,
+                 from ../src/2dof.cpp:10:
+/usr/include/boost/range/begin.hpp:101:55: note: template<class T> typename boost::range_iterator<C>::type boost::range_adl_barrier::begin(T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<T>::type begin( T& r )
+                                                       ^
+/usr/include/boost/range/begin.hpp:101:55: note:   template argument deduction/substitution failed:
+/usr/include/boost/range/begin.hpp:112:61: note: template<class T> typename boost::range_iterator<const T>::type boost::range_adl_barrier::begin(const T&)
+ inline BOOST_DEDUCED_TYPENAME range_iterator<const T>::type begin( const T& r )
+                                                             ^
+/usr/include/boost/range/begin.hpp:112:61: note:   template argument deduction/substitution failed:
+make: *** [src/2dof.o] Error 1
+
+14:29:45 Build Finished (took 8s.159ms)
+

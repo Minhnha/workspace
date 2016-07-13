@@ -1,0 +1,24 @@
+11:39:00 **** Build of configuration Debug for project basicio ****
+make all 
+Building file: ../src/basicio.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/basicio.d" -MT"src/basicio.d" -o "src/basicio.o" "../src/basicio.cpp"
+Finished building: ../src/basicio.cpp
+ 
+Building target: basicio
+Invoking: Cross G++ Linker
+g++  -o "basicio"  ./src/basicio.o   
+Finished building target: basicio
+ 
+11:39:07 **** Incremental Build of configuration Debug for project basicio ****
+make all 
+Building file: ../src/basicio.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/basicio.d" -MT"src/basicio.d" -o "src/basicio.o" "../src/basicio.cpp"
+Finished building: ../src/basicio.cpp
+ 
+Building target: basicio
+Invoking: Cross G++ Linker
+g++  -o "basicio"  ./src/basicio.o   
+Finished building target: basicio
+ 

@@ -1,0 +1,23 @@
+11:59:41 **** Incremental Build of configuration Debug for project functionsabs ****
+make all 
+Building file: ../src/absolute.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/absolute.d" -MT"src/absolute.d" -o "src/absolute.o" "../src/absolute.cpp"
+Finished building: ../src/absolute.cpp
+ 
+Building file: ../src/functionsabs.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/functionsabs.d" -MT"src/functionsabs.d" -o "src/functionsabs.o" "../src/functionsabs.cpp"
+Finished building: ../src/functionsabs.cpp
+ 
+Building target: functionsabs
+Invoking: Cross G++ Linker
+g++  -o "functionsabs"  ./src/absolute.o ./src/functionsabs.o   
+Finished building target: functionsabs
+ 
+11:59:50 **** Incremental Build of configuration Debug for project functionsabs ****
+make all 
+make: Nothing to be done for `all'.
+12:03:04 **** Incremental Build of configuration Debug for project functionsabs ****
+make all 
+make: Nothing to be done for `all'.
