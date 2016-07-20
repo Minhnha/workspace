@@ -1,0 +1,77 @@
+//============================================================================
+// Name        : sode2.cpp
+// Author      : Minh nha pham
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+double h = 0.1;
+double t[11];
+double y[11], z[11];
+double k_1,k_2,k_3,k_4,l_1,l_2,l_3,l_4;
+
+double dydt(double z)
+{
+double result;
+result = z;
+return (result);
+}
+
+double dzdt(double y, double z)
+{
+double result;
+result = 6*y-z;
+return (result);
+}
+
+int main() {
+
+
+	y[1] = 3;
+	z[1] = 1;
+
+	for (int i=1;i<13;i++)
+	{
+	t[i]=(i-1)*h;
+//	x[i]=0;
+//	cout << t[i] << endl;
+	}
+
+
+
+	for (int i=1;i<12;i++)
+		{
+	    k_1 = h*dydt(z[i]);
+	    l_1 = h*dzdt(y[i],z[i]);
+	    k_2 = h*dydt(z[i]+0.5*l_1);
+	    l_2 = h*dzdt(y[i]+0.5*k_1,z[i]+0.5*l_1);
+	    k_3 = h*dydt(z[i]+0.5*l_2);
+	    l_3 = h*dzdt(y[i]+0.5*k_2,z[i]+0.5*l_2);
+	    k_4 = h*dydt(z[i]+l_3);
+	    l_4 = h*dzdt(y[i]+k_3,z[i]+l_3);
+
+	    y[i+1] = y[i] + 0.16667*(k_1+2*k_2+2*k_3+k_4);
+	    z[i+1] = z[i] + 0.16667*(l_1+2*l_2+2*l_3+l_4);
+
+		// save to file-------------------------------------------------------
+		    ofstream outfile;
+		    outfile.open("afile.txt", std::ios_base::app); // append to a file
+		    outfile << t[i] << '\t'<< y[i] << '\t' << z[i] << endl;
+		    outfile.close();
+		//--------------------------------------------------------------------
+
+
+		}
+
+//	cout << sizeof(z)/sizeof(z[0]) << endl;
+
+
+	cout << "finish" << endl; // prints !!!Hello World!!!
+	return 0;
+}

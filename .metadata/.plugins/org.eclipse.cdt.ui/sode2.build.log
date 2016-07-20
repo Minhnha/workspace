@@ -1,4 +1,4 @@
-18:04:40 **** Incremental Build of configuration Debug for project sode2 ****
+15:53:17 **** Incremental Build of configuration Debug for project sode2 ****
 make all 
 Building file: ../src/sode2.cpp
 Invoking: Cross G++ Compiler
@@ -11,5 +11,5 @@ g++  -o "sode2"  ./src/sode2.o
 Finished building target: sode2
  
 
-18:04:41 Build Finished (took 213ms)
+15:53:17 Build Finished (took 271ms)
 

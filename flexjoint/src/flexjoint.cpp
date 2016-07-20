@@ -11,37 +11,37 @@
 #include <math.h>
 using namespace std;
 
-float h = 0.001;
-float I,mgl,k,N,J,B;
-float t[10001];
-float q1[10001], q2[10001], z1[10001],z2[10001];
-float k_0,k_1,k_2,k_3,l_0,l_1,l_2,l_3,m_0,m_1,m_2,m_3,n_0,n_1,n_2,n_3;
+double h = 0.001;
+double I,mgl,k,N,J,B;
+double t[10001];
+double q1[10001], q2[10001], z1[10001],z2[10001];
+double k_0,k_1,k_2,k_3,l_0,l_1,l_2,l_3,m_0,m_1,m_2,m_3,n_0,n_1,n_2,n_3;
 
-float f(float z1)  //dq1dt
+double f(double z1)  //dq1dt
 {
-float result;
+double result;
 result = z1;
 return (result);
 }
 
-float g(float q1, float q2)  //dz1dt
+double g(double q1, double q2)  //dz1dt
 {
-float result;
-result = -0.0513*k*(q1-0.0063*q2)-0.0513*mgl*sin(q1);
+double result;
+result = -0.0512820512820513*k*(q1-0.00625*q2)-0.0512820512820513*mgl*sin(q1);
 return (result);
 }
 
-float x(float z2)  //dq2dt
+double x(double z2)  //dq2dt
 {
-float result;
+double result;
 result = z2;
 return (result);
 }
 
-float y(float q1, float q2, float z2)   //dz2dt
+double y(double q1, double q2, double z2)   //dz2dt
 {
-float result;
-result = -3.1250e3*B*z2+k*19.5313*(q1-0.0063*q2);
+double result;
+result = -3.125e3*B*z2+k*19.53125*(q1-0.00625*q2);
 return (result);
 }
 
@@ -54,19 +54,19 @@ int main() {
 	B = 0.0011;
 	N = 160;
 
-	q1[1] = 0.1;
+	q1[0] = 0.1;
 
 
-	for (int i=1;i<10003;i++)
+	for (int i=0;i<10001;i++)
 	{
-	t[i]=(i-1)*h;
+	t[i]=i*h;
 //	x[i]=0;
 //	cout << t[i] << endl;
 	}
 
 
 
-	for (int i=1;i<10003;i++)
+	for (int i=0;i<10001;i++)
 		{
 	    k_0 = h*f(z1[i]);
 	    l_0 = h*g(q1[i],q2[i]);
@@ -88,10 +88,10 @@ int main() {
 	    m_3 = h*x(z2[i]+n_2);
 	    n_3 = h*y(q1[i]+k_2,q2[i]+m_2,z2[i]+n_2);
 
-	    q1[i+1] = q1[i] + 0.16667*(k_0+2*k_1+2*k_2+k_3);
-	    z1[i+1] = z1[i] + 0.16667*(l_0+2*l_1+2*l_2+l_3);
-	    q2[i+1] = q2[i] + 0.16667*(m_0+2*m_1+2*m_2+m_3);
-	    z2[i+1] = z2[i] + 0.16667*(n_0+2*n_1+2*n_2+n_3);
+	    q1[i+1] = q1[i] + 0.1666666666666667*(k_0+2*k_1+2*k_2+k_3);
+	    z1[i+1] = z1[i] + 0.1666666666666667*(l_0+2*l_1+2*l_2+l_3);
+	    q2[i+1] = q2[i] + 0.1666666666666667*(m_0+2*m_1+2*m_2+m_3);
+	    z2[i+1] = z2[i] + 0.1666666666666667*(n_0+2*n_1+2*n_2+n_3);
 
 
 

@@ -1,4 +1,4 @@
-17:36:00 **** Incremental Build of configuration Debug for project flexjoint ****
+16:10:47 **** Incremental Build of configuration Debug for project flexjoint ****
 make all 
 Building file: ../src/flexjoint.cpp
 Invoking: Cross G++ Compiler
@@ -11,5 +11,5 @@ g++  -o "flexjoint"  ./src/flexjoint.o
 Finished building target: flexjoint
  
 
-17:36:00 Build Finished (took 265ms)
+16:10:47 Build Finished (took 338ms)
 

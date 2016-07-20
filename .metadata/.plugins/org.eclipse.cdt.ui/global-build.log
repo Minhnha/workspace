@@ -1,24 +1,7 @@
-14:25:17 **** Incremental Build of configuration Debug for project flexjoint ****
+15:56:17 **** Build of configuration Default for project flexjoint ****
 make all 
-Building file: ../src/flexjoint.cpp
-Invoking: Cross G++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/flexjoint.d" -MT"src/flexjoint.d" -o "src/flexjoint.o" "../src/flexjoint.cpp"
-../src/flexjoint.cpp: In function ‘int main()’:
-../src/flexjoint.cpp:64:23: error: ‘dydt’ was not declared in this scope
-      k_1 = h*dydt(z[i]);
-                       ^
-make: *** [src/flexjoint.o] Error 1
-14:25:20 **** Incremental Build of configuration Debug for project flexjoint ****
-make all 
-Building file: ../src/flexjoint.cpp
-Invoking: Cross G++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/flexjoint.d" -MT"src/flexjoint.d" -o "src/flexjoint.o" "../src/flexjoint.cpp"
-../src/flexjoint.cpp: In function ‘int main()’:
-../src/flexjoint.cpp:64:23: error: ‘dydt’ was not declared in this scope
-      k_1 = h*dydt(z[i]);
-                       ^
-make: *** [src/flexjoint.o] Error 1
-14:38:09 **** Incremental Build of configuration Debug for project flexjoint ****
+make: *** No rule to make target `all'.  Stop.
+15:58:13 **** Build of configuration Debug for project flexjoint ****
 make all 
 Building file: ../src/flexjoint.cpp
 Invoking: Cross G++ Compiler
@@ -30,79 +13,7 @@ Invoking: Cross G++ Linker
 g++  -o "flexjoint"  ./src/flexjoint.o   
 Finished building target: flexjoint
  
-14:38:21 **** Incremental Build of configuration Debug for project flexjoint ****
-make all 
-Building file: ../src/flexjoint.cpp
-Invoking: Cross G++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/flexjoint.d" -MT"src/flexjoint.d" -o "src/flexjoint.o" "../src/flexjoint.cpp"
-Finished building: ../src/flexjoint.cpp
- 
-Building target: flexjoint
-Invoking: Cross G++ Linker
-g++  -o "flexjoint"  ./src/flexjoint.o   
-Finished building target: flexjoint
- 
-15:24:06 **** Incremental Build of configuration Debug for project flexjoint ****
-make all 
-Building file: ../src/flexjoint.cpp
-Invoking: Cross G++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/flexjoint.d" -MT"src/flexjoint.d" -o "src/flexjoint.o" "../src/flexjoint.cpp"
-Finished building: ../src/flexjoint.cpp
- 
-Building target: flexjoint
-Invoking: Cross G++ Linker
-g++  -o "flexjoint"  ./src/flexjoint.o   
-Finished building target: flexjoint
- 
-15:25:16 **** Incremental Build of configuration Debug for project flexjoint ****
-make all 
-Building file: ../src/flexjoint.cpp
-Invoking: Cross G++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/flexjoint.d" -MT"src/flexjoint.d" -o "src/flexjoint.o" "../src/flexjoint.cpp"
-Finished building: ../src/flexjoint.cpp
- 
-Building target: flexjoint
-Invoking: Cross G++ Linker
-g++  -o "flexjoint"  ./src/flexjoint.o   
-Finished building target: flexjoint
- 
-15:27:17 **** Incremental Build of configuration Debug for project flexjoint ****
-make all 
-Building file: ../src/flexjoint.cpp
-Invoking: Cross G++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/flexjoint.d" -MT"src/flexjoint.d" -o "src/flexjoint.o" "../src/flexjoint.cpp"
-Finished building: ../src/flexjoint.cpp
- 
-Building target: flexjoint
-Invoking: Cross G++ Linker
-g++  -o "flexjoint"  ./src/flexjoint.o   
-Finished building target: flexjoint
- 
-17:30:09 **** Incremental Build of configuration Debug for project flexjoint ****
-make all 
-Building file: ../src/flexjoint.cpp
-Invoking: Cross G++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/flexjoint.d" -MT"src/flexjoint.d" -o "src/flexjoint.o" "../src/flexjoint.cpp"
-Finished building: ../src/flexjoint.cpp
- 
-Building target: flexjoint
-Invoking: Cross G++ Linker
-g++  -o "flexjoint"  ./src/flexjoint.o   
-Finished building target: flexjoint
- 
-17:34:47 **** Incremental Build of configuration Debug for project flexjoint ****
-make all 
-Building file: ../src/flexjoint.cpp
-Invoking: Cross G++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/flexjoint.d" -MT"src/flexjoint.d" -o "src/flexjoint.o" "../src/flexjoint.cpp"
-Finished building: ../src/flexjoint.cpp
- 
-Building target: flexjoint
-Invoking: Cross G++ Linker
-g++  -o "flexjoint"  ./src/flexjoint.o   
-Finished building target: flexjoint
- 
-17:36:00 **** Incremental Build of configuration Debug for project flexjoint ****
+16:10:47 **** Incremental Build of configuration Debug for project flexjoint ****
 make all 
 Building file: ../src/flexjoint.cpp
 Invoking: Cross G++ Compiler
